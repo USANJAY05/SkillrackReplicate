@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="loginpg.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+            <div class="navbar">
+                <div class="navbarContent">
+                    <a href="index.html">Home</a>
+                    <a href="loginpg.html">Login</a>
+                    <a href="signuppg.html">Sign-up</a>
+                    <a href="">Pricing</a>
+                    <a href="contactus.html">Contact Us</a>
+                </div>
+                <div class="logo">
+                    <img src="http://cdn.skillrack.com/img/logo.gif?pfdrid_c=true" width="230px" alt="">
+                </div>
+            </div>
+
+        <div class="content">
+            <div>
+                <div class="email">
+                    <label class="lb1" for="email">Login Id</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="password">
+                    <label class="lb2" for="pass">Password</label>
+                    <input type="password" name="" id="pass">
+                    <p id="invalid" style="color: red;"></p>
+                </div>
+                <button onclick="login();">Login</button>
+            </div>            
+
+     
+            <div class="extra-btn">
+                <button onclick="location.href='forgetpass.html';" id="frg">Forget Password</button>
+                <button onclick="location.href='signuppg.html';" id="newur">New User - Register</button>
+            </div>
+
+
+        </div>
+
+        <div class="navbar navbarbottom">
+            <div class="navbarContent">
+                <a href="">Privacy policy</a>
+                <a href="">Terms of use</a>
+                <a href="">Cancellation & Returns</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    function login(){
+        var a=document.getElementById("email").value;
+        var b=document.getElementById("pass").value;
+        e=['22ad116@stjosephsengg','22ad131@stjosephsengg','22ad228@stjosephsengg','22ad236@stjosephsengg','22ad278@stjosephsengg','22ad253@stjosephsengg','22ad104@stjosephsengg'];
+        p=['#2VQCPROO','somesh1812','9442855233','sukinraj2005','s.arul@2004','valli','srack@123'];
+        if(e.includes(a) && p.includes(b)){
+            location.href='mainpg.html';
+        }
+        else{
+            document.getElementById('invalid').innerHTML='Invalid username or password';
+        }
+    }
+    
+</script>
+
+</html>
